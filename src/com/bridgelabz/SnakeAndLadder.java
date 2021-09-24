@@ -14,31 +14,42 @@ public class SnakeAndLadder {
         // constants
         int LADDER = 1;
         int SNAKE = 2;
+        int NOPLAY = 0;
 
-        // variables
-        double forwardStep, backwardStep;
+
         int startPosition = 0;
+        int winPosition = 100;
         System.out.println("Player position is " + startPosition);
 
-        //logic to get dice number
-        double diceNum = Math.floor(((Math.random() * 10) % 6) + 1);
-        System.out.println("Dice number is = " + diceNum);
+        while (startPosition < winPosition) {
+            //random function to get dice number
+            int diceNum = (int) Math.floor(((Math.random() * 10) % 6) + 1);
+            System.out.println("dice number is" + diceNum);
+            //logic to get whether it snake or ladder or no play
+            int option = (int) Math.floor(Math.random() * 10) % 3;
+            System.out.println("option is" + option);
+            switch (option) {
+                case 1:
+                    option = LADDER;
+                    startPosition += diceNum;
+                    break;
+                case 2:
+                    option = SNAKE;
+                    startPosition -= diceNum;
+                    break;
+                default:
+                    option = NOPLAY;
+                    startPosition += 0;
 
-        //logic to know whether it snakes & ladder or no play
-        double option = Math.floor(Math.random() * 10) % 3;
-        System.out.println("option is" + option);
+                    if (startPosition < 0) {
+                        System.out.println("Restart the game");
+                        startPosition = 0;
 
-        //if condition for the result
-        if (option == LADDER) {
-            forwardStep = (diceNum + startPosition);
-            System.out.println("the player will move the forward positions" + forwardStep);
-        } else if (option == SNAKE) {
-            backwardStep = (diceNum - startPosition);
-            System.out.println("the player will move the backward positions" + backwardStep);
-        } else
-            System.out.println("there is no play and player will stay at the same position");
+                    }
+            }
+        }
 
-
+        System.out.println("player on position :" + winPosition);
+        System.out.println("won the match");
     }
-
 }
