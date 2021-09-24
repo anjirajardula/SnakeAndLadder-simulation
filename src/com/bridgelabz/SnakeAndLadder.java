@@ -18,6 +18,7 @@ public class SnakeAndLadder {
 
 
         int startPosition = 0;
+        int newPosition = 0;
         int winPosition = 100;
         System.out.println("Player position is " + startPosition);
 
@@ -40,14 +41,17 @@ public class SnakeAndLadder {
                 default:
                     option = NOPLAY;
                     startPosition += 0;
+            }
 
-                    if (startPosition < 0) {
-                        System.out.println("Restart the game");
-                        startPosition = 0;
+            startPosition = startPosition + newPosition; //calculating the position of the dice
 
-                    }
+            if (startPosition < 0) {
+                System.out.println("Restart the game");
+                startPosition = 0;
+
             }
         }
+
 
         System.out.println("player on position :" + winPosition);
         System.out.println("won the match");
