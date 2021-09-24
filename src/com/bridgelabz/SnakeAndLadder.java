@@ -20,7 +20,7 @@ public class SnakeAndLadder {
         int startPosition = 0;
         int newPosition = 0;
         int winPosition = 100;
-        int count = 0;
+        System.out.println("player position is " + startPosition);
 
         while (startPosition < winPosition) {
             //random function to get dice number
@@ -29,7 +29,7 @@ public class SnakeAndLadder {
             //logic to get whether it snake or ladder or no play
             int option = (int) Math.floor(Math.random() * 10) % 3;
             System.out.println("option is" + option);
-            count++;
+
 
             switch (option) {
                 case 1:
@@ -54,10 +54,12 @@ public class SnakeAndLadder {
 
             }
             if (startPosition > 100) {
-                System.out.println("you are now at " + startPosition + "th" + " position");
+                startPosition = newPosition;
+
 
             }
-            System.out.println("\nCongratulation .. you won! the game \t after the rolling the die " + count + " position");
+            System.out.println("you are now at " + startPosition + "th" + "position");
+            System.out.println("won the match");
 
 
         }
