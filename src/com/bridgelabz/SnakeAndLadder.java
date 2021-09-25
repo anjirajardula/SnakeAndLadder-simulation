@@ -32,15 +32,15 @@ public class SnakeAndLadder {
             switch (option) {
                 case 1:
                     option = LADDER;
-                    startPosition += diceNum;
+                    newPosition += diceNum;
                     break;
                 case 2:
                     option = SNAKE;
-                    startPosition -= diceNum;
+                    newPosition -= diceNum;
                     break;
                 default:
                     option = NOPLAY;
-                    startPosition += 0;
+                    newPosition += 0;
             }
 
             startPosition = startPosition + newPosition; //calculating the position of the dice
