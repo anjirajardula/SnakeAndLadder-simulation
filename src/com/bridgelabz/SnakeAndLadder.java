@@ -2,7 +2,6 @@ package com.bridgelabz;
 
 /**
  * purpose- To implement Snake And Ladder simulation using JAVA
- * declaring the logics for die position , win the position and play for 2
  *
  * @author :Anjiraj
  * @version :16.0
@@ -64,7 +63,7 @@ public class SnakeAndLadder {
 
             System.out.println("You are now at " + startPosition + "th" + " position");
         }
-        //System.out.println("The player on position: " + winPosition);
+
         System.out.println("Won the Match");
     }
 }
