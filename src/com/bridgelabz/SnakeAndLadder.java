@@ -64,7 +64,12 @@ public class SnakeAndLadder {
             System.out.println("You are now at " + startPosition + "th" + " position");
         }
 
+
         System.out.println("Won the Match");
+
+        System.out.println("player on option :" + winPosition);
+        System.out.println("won the match");
+
     }
 }
 
