@@ -53,7 +53,7 @@ public class SnakeAndLadder {
         }
 
 
-        System.out.println("player on position :" + winPosition);
+        System.out.println("player on option :" + winPosition);
         System.out.println("won the match");
     }
 }
